@@ -83,6 +83,89 @@ The `user_data` pointer will be forwarded from `json_settings` to allow applicat
 context to be passed.
 
 
+Changes in version 1.1.1
+------------------------
+
+* Improved Unicode surrogate pair handling
+  ([#58](https://github.com/json-parser/json-parser/pull/58),
+   [#159](https://github.com/json-parser/json-parser/pull/159),
+   [#179](https://github.com/json-parser/json-parser/issues/179))
+
+* Fixes for null pointer derefs when using memory limiting or a fallible allocator
+  ([e7ce6f7](https://github.com/json-parser/json-parser/commit/839bc075bf78d78c5af4cd2b0d9e0f5682fce752))
+
+* Fixes for out of bounds reads with malformed inputs
+  ([#72](https://github.com/json-parser/json-parser/pull/72),
+   [#74](https://github.com/json-parser/json-parser/issues/74),
+   [#78](https://github.com/json-parser/json-parser/issues/78))
+
+* Reduced undefined behavior
+  ([#108](https://github.com/json-parser/json-parser/pull/108),
+   [#128](https://github.com/json-parser/json-parser/pull/128),
+   [#130](https://github.com/json-parser/json-parser/pull/130),
+   [#131](https://github.com/json-parser/json-parser/issues/131),
+   [#154](https://github.com/json-parser/json-parser/pull/154),
+   [#166](https://github.com/json-parser/json-parser/issues/166))
+
+* Added guards against improper allocations and overflows
+  ([#52](https://github.com/json-parser/json-parser/issues/52),
+   [#169](https://github.com/json-parser/json-parser/issues/169),
+   [#185](https://github.com/json-parser/json-parser/issues/185))
+
+* Named `json_object_entry` for more easily working with object elements
+  ([05f2c34](https://github.com/json-parser/json-parser/commit/05f2c346d155db8b5b658ec45a51b9ffa2972dbf),
+   [c967d4d](https://github.com/json-parser/json-parser/commit/c967d4d86788c50352e8ea4d67c64808a49c6650))
+
+* Better support for configuring `json_int_t`
+  ([#84](https://github.com/json-parser/json-parser/issues/84),
+   [#148](https://github.com/json-parser/json-parser/issues/148),
+   [#151](https://github.com/json-parser/json-parser/pull/151),
+   [#153](https://github.com/json-parser/json-parser/pull/153))
+
+* Some of the C++ helpers now work in older standards / with more compilers
+  ([#77](https://github.com/json-parser/json-parser/pull/77))
+
+* Error messages are a bit more consistent
+  ([#123](https://github.com/json-parser/json-parser/pull/123))
+
+* Switched to using `size_t` in more places
+  ([#138](https://github.com/json-parser/json-parser/issues/138),
+   [#139](https://github.com/json-parser/json-parser/pull/139))
+
+* Slightly better floating point parsing
+  ([#136](https://github.com/json-parser/json-parser/pull/136),
+   [#178](https://github.com/json-parser/json-parser/issues/178))
+
+* Fixed compile errors for some environments
+  ([#49](https://github.com/json-parser/json-parser/issues/49),
+   [#57](https://github.com/json-parser/json-parser/pull/57))
+
+* Reduced compiler warnings
+  ([#88](https://github.com/json-parser/json-parser/pull/88),
+   [#110](https://github.com/json-parser/json-parser/pull/110),
+   [#146](https://github.com/json-parser/json-parser/pull/146))
+
+* Small tweaks to which headers are included where
+  ([#109](https://github.com/json-parser/json-parser/pull/109),
+   [#115](https://github.com/json-parser/json-parser/pull/115),
+   [#127](https://github.com/json-parser/json-parser/pull/127),
+   [#140](https://github.com/json-parser/json-parser/pull/140))
+
+* Small build system improvements
+  ([#37](https://github.com/json-parser/json-parser/issues/37),
+   [#45](https://github.com/json-parser/json-parser/pull/45),
+   [#56](https://github.com/json-parser/json-parser/pull/56),
+   [#62](https://github.com/json-parser/json-parser/pull/62),
+   [#75](https://github.com/json-parser/json-parser/pull/75),
+   [#104](https://github.com/json-parser/json-parser/pull/104),
+   [#105](https://github.com/json-parser/json-parser/pull/105),
+   [#107](https://github.com/json-parser/json-parser/pull/107),
+   [#113](https://github.com/json-parser/json-parser/pull/113),
+   [#114](https://github.com/json-parser/json-parser/pull/114),
+   [#122](https://github.com/json-parser/json-parser/pull/122),
+   [#164](https://github.com/json-parser/json-parser/pull/164),
+   [#183](https://github.com/json-parser/json-parser/issues/183))
+
 Changes in version 1.1.0
 ------------------------
 
